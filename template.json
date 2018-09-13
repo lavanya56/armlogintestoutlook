@@ -3,14 +3,14 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "sites_Armappwebgit_name": {
-	"defaultValue": "Armwebgit456",
+	"defaultValue": "Armwebgit45",
       "type": "string",
       "metadata": {
         "description": "The name of the web app that you wish to create."
       }
     },
-    "hostingPlanName_Armwebgit456": {
-	"Value": "Armwebgit456",
+    "hostingPlanName_Armwebgit45": {
+	"Value": "Armwebgit45",
       "type": "string",
       "metadata": {
         "description": "The name of the App Service plan to use for hosting the web app."
@@ -74,7 +74,7 @@
   "resources": [
     {
       "apiVersion": "2015-08-01",
-      "name": "[parameters('hostingPlanName_Armwebgit456')]",
+      "name": "[parameters('hostingPlanName_Armwebgit45')]",
       "type": "Microsoft.Web/serverfarms",
       "location": "[parameters('location')]",
       "sku": {
@@ -82,7 +82,7 @@
         "capacity": "[parameters('workerSize')]"
       },
       "properties": {
-        "name": "[parameters('hostingPlanName_Armwebgit456')]"
+        "name": "[parameters('hostingPlanName_Armwebgit45')]"
       }
     },
     {
@@ -91,10 +91,10 @@
       "type": "Microsoft.Web/sites",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName_Armwebgit456'))]"
+        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName_Armwebgit45'))]"
       ],
       "properties": {
-        "serverFarmId": "[parameters('hostingPlanName_Armwebgit456')]"
+        "serverFarmId": "[parameters('hostingPlanName_Armwebgit45')]"
       },
       "resources": [
         {
